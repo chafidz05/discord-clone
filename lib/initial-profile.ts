@@ -5,7 +5,7 @@ import { db } from "@/lib/db";
 export const initialProfile = async () => {
   const user = await currentUser();
 
-  if(!user) {
+  if (!user) {
     return redirectToSignIn();
   }
 
@@ -15,7 +15,7 @@ export const initialProfile = async () => {
     }
   });
 
-  if(profile) {
+  if (profile) {
     return profile;
   }
 
